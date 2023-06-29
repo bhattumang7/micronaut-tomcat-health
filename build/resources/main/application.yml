@@ -1,0 +1,18 @@
+micronaut:
+  application:
+    name: default
+  security:
+    enabled: true
+    intercept-url-map:
+      - 
+        pattern: /health/*
+        access:
+          - isAnonymous()
+netty:
+  default:
+    allocator:
+      max-order: 3
+endpoints:
+  health:
+    enabled: true
+    sensitive: false
